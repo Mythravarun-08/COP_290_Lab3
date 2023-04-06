@@ -1,0 +1,227 @@
+.seller-signup-child {
+  position: absolute;
+  width: 109.67%;
+  top: 294.65px;
+  right: -4.81%;
+  left: -4.86%;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.gadget-world {
+  position: absolute;
+  top: 109px;
+  left: calc(50% - 346px);
+  display: inline-block;
+  width: 645px;
+  height: 87px;
+  cursor: pointer;
+}
+.group-child {
+  position: absolute;
+  width: 66.93%;
+  top: 895.88px;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  padding-left: 20px;
+  right: 32.89%;
+  left: 0.18%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 87.3px;
+}
+.create-account,
+.password {
+  position: absolute;
+  width: 21.72%;
+  top: 922.9px;
+  left: 2.64%;
+  display: inline-block;
+  height: 37.41px;
+}
+.create-account {
+  width: 52.07%;
+  top: 0;
+  left: 20.14%;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  height: 66.52px;
+}
+.group-item {
+  position: absolute;
+  width: 67.11%;
+  top: 181.88px;
+  right: 32.89%;
+  font-size: 30px;
+  padding-left: 20px;
+  font-family: var(--font-artifika);
+  border : none;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 87.3px;
+}
+.user-name {
+  position: absolute;
+  width: 33.77%;
+  top: 210.98px;
+  left: 2.9%;
+  display: inline-block;
+  height: 34.3px;
+}
+.group-inner,
+.rectangle-div {
+  position: absolute;
+  width: 66.93%;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  padding-left: 20px;
+  top: 324.26px;
+  right: 32.89%;
+  left: 0.18%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 87.3px;
+}
+.rectangle-div {
+  top: 465.61px;
+}
+.email,
+.phone-number {
+  position: absolute;
+  width: 35.53%;
+  top: 342.97px;
+  left: 2.81%;
+  display: inline-block;
+  height: 51.96px;
+}
+.phone-number {
+  width: 28.94%;
+  top: 492.63px;
+  left: 2.64%;
+  height: 37.41px;
+}
+.group-child2 {
+  position: absolute;
+  width: 66.93%;
+  top: 1036.18px;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  padding-left: 20px;
+  right: 32.89%;
+  left: 0.18%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 86.26px;
+}
+.confirm-password {
+  position: absolute;
+  width: 38.52%;
+  top: 1062.16px;
+  left: 2.64%;
+  display: inline-block;
+  height: 38.45px;
+}
+.group-child3 {
+  position: absolute;
+  width: 99.82%;
+  top: 754.53px;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  padding-left: 20px;
+  right: 0;
+  left: 0.18%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 86.26px;
+}
+.address {
+  position: absolute;
+  width: 21.72%;
+  top: 780.51px;
+  left: 2.64%;
+  display: inline-block;
+  height: 38.45px;
+}
+.group-child4 {
+  position: absolute;
+  width: 66.93%;
+  top: 610.07px;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  padding-left: 20px;
+  right: 32.89%;
+  left: 0.18%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+  height: 87.3px;
+}
+.aadhar-number {
+  position: absolute;
+  width: 38.26%;
+  top: 635.01px;
+  left: 2.9%;
+  display: inline-block;
+  height: 47.81px;
+}
+.group-child5 {
+  position: absolute;
+  width: 62.88%;
+  top: 1179.6px;
+  right: 37.12%;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  border : none;
+  color: white;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-black);
+  height: 91.46px;
+  cursor: pointer;
+}
+.create-account1 {
+  position: absolute;
+  width: 36.76%;
+  top: 1205.59px;
+  left: 18.29%;
+  color: var(--color-white);
+  display: inline-block;
+  height: 42.61px;
+}
+.rectangle-parent {
+  position: absolute;
+  width: 68.49%;
+  top: 104.94px;
+  right: 18.25%;
+  left: 13.25%;
+  height: 1271.06px;
+}
+.seller-signup-inner {
+  position: absolute;
+  width: 84.18%;
+  top: 429px;
+  right: 8.45%;
+  left: 7.37%;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 1817px;
+  overflow: hidden;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray);
+}
+.seller-signup {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 2412px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}

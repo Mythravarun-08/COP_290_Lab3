@@ -1,0 +1,236 @@
+.order-tracking-item {
+  position: absolute;
+  width: 122.96%;
+  top: 179.5px;
+  right: -22.93%;
+  left: -0.03%;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.group-child111 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  width: 381px;
+  height: 583px;
+}
+.group-child112,
+.group-child113 {
+  background-color: var(--color-silver-200);
+  font-family: var(--font-artifika);
+  height: 65px;
+}
+.group-child112 {
+  position: absolute;
+  top: 468px;
+  left: 26.42px;
+  border: none;
+  font-size: 30px;
+  border-radius: var(--br-mini);
+  width: 306.91px;
+  cursor: pointer;
+}
+.group-child113 {
+  top: 355px;
+}
+.group-child113,
+.group-child114,
+.group-child115 {
+  position: absolute;
+  font-size: 30px;
+  border : none;
+
+  left: 26.42px;
+  border-radius: var(--br-mini);
+  width: 306.91px;
+}
+.group-child114 {
+  top: 247px;
+  font-family: var(--font-artifika);
+  background-color: var(--color-silver-200);
+  height: 72px;
+  cursor: pointer;
+}
+.group-child115 {
+  top: 146px;
+  background-color: var(--color-dimgray);
+  height: 65px;
+}
+.add-product3,
+.faqs3,
+.logout4,
+.my-orders3 {
+  position: absolute;
+  top: 158px;
+  font-size: 30px;
+  left: 85.23px;
+  display: inline-block;
+  width: 215.78px;
+  height: 41px;
+}
+.add-product3,
+.faqs3,
+.logout4 {
+  top: 259px;
+  width: 190.64px;
+  height: 37px;
+}
+.faqs3,
+.logout4 {
+  top: 367px;
+  left: 90.35px;
+  width: 145.6px;
+  height: 36px;
+}
+.logout4 {
+  top: 475px;
+  width: 102.65px;
+  height: 37px;
+}
+.group-child116,
+.vector-parent2 {
+  position: absolute;
+  top: 222px;
+  left: 0;
+  width: 381px;
+  height: 583px;
+}
+.group-child116 {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+}
+.group-child117 {
+  position: absolute;
+  height: 1.91%;
+  width: 79.55%;
+  top: 91.2%;
+  right: 7.63%;
+  bottom: 6.89%;
+  left: 12.82%;
+  background-color: var(--color-white);
+}
+.group-child118 {
+  position: absolute;
+  height: 3.44%;
+  width: 2.54%;
+  top: 90.43%;
+  right: 35.4%;
+  bottom: 6.12%;
+  left: 62.05%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.group-child119,
+.group-child120 {
+  position: absolute;
+  height: 35.59%;
+  width: 90.44%;
+  top: 2.68%;
+  right: 5.6%;
+  bottom: 61.73%;
+  left: 3.97%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-darkgray-100);
+}
+.group-child120 {
+  height: 39.92%;
+  width: 60.43%;
+  top: 41.33%;
+  right: 35.61%;
+  bottom: 18.75%;
+}
+.group-child121,
+.group-child122,
+.group-child123 {
+  position: absolute;
+  height: 3.44%;
+  width: 2.54%;
+  top: 90.43%;
+  right: 85.86%;
+  bottom: 6.12%;
+  left: 11.6%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.group-child122,
+.group-child123 {
+  right: 6.41%;
+  left: 91.05%;
+}
+.group-child123 {
+  right: 60.02%;
+  left: 37.44%;
+}
+.delivered1,
+.order-conformed,
+.out-for-delivery1,
+.shipped1 {
+  position: absolute;
+  height: 4.21%;
+  width: 20.75%;
+  top: 84.44%;
+  left: 7.22%;
+  font-weight: 600;
+  display: inline-block;
+}
+.delivered1,
+.out-for-delivery1,
+.shipped1 {
+  height: 4.97%;
+  width: 8.04%;
+  top: 95.03%;
+  left: 34.69%;
+}
+.delivered1,
+.out-for-delivery1 {
+  height: 4.34%;
+  width: 18.21%;
+  top: 84.31%;
+  left: 55.04%;
+}
+.delivered1 {
+  height: 1.4%;
+  width: 13.43%;
+  top: 94.64%;
+  left: 86.57%;
+}
+.rectangle-parent23 {
+  position: absolute;
+  height: 74.67%;
+  width: 66.43%;
+  top: 19.43%;
+  right: 6.01%;
+  bottom: 5.9%;
+  left: 27.57%;
+  font-size: var(--font-size-xl);
+}
+.gadget-world11 {
+  position: absolute;
+  top: 57px;
+  left: calc(50% - 227px);
+  font-size: var(--font-size-51xl);
+  font-family: var(--font-artifika);
+  display: inline-block;
+  width: 645px;
+  height: 87px;
+}
+.order-tracking1 {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-11xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}

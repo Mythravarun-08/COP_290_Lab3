@@ -1,0 +1,111 @@
+.conformation-page-child {
+  position: absolute;
+  width: 100.07%;
+  top: 269.5px;
+  right: -0.03%;
+  left: -0.03%;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.gadget-world {
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+  top: 113px;
+  left: calc(50% - 323px);
+  display: inline-block;
+  width: 645px;
+  height: 87px;
+}
+.group-child,
+.group-item {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+}
+.group-item {
+  height: 34.39%;
+  width: 88.93%;
+  top: 9.56%;
+  right: 5.48%;
+  bottom: 56.05%;
+  left: 5.58%;
+  background-color: var(--color-gainsboro);
+}
+.price {
+  position: absolute;
+  height: 14.03%;
+  width: 26.52%;
+  top: 55.11%;
+  left: 8.18%;
+  display: inline-block;
+}
+.group-inner {
+  position: absolute;
+  height: 19.16%;
+  width: 62.91%;
+  top: 75.32%;
+  font-size: 50px;
+  color: white;
+  padding-left: 20px;
+  font-family: var(--font-artifika);
+  right: 27.22%;
+  bottom: 5.52%;
+  left: 9.87%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-black);
+  cursor: pointer;
+}
+.confirm-buy {
+  position: absolute;
+  height: 11.01%;
+  width: 53.94%;
+  top: 80.9%;
+  left: 20.84%;
+  color: var(--color-white);
+  display: inline-block;
+}
+.rectangle-div {
+  position: absolute;
+  top: 526px;
+  left: 329px;
+  background-color: var(--color-gainsboro);
+  width: 292px;
+  height: 77px;
+}
+.xxxx {
+  position: absolute;
+  top: 546px;
+  left: 361px;
+  display: inline-block;
+  width: 208px;
+  height: 48px;
+}
+.rectangle-parent {
+  position: absolute;
+  height: 66.02%;
+  width: 69.65%;
+  top: 28.64%;
+  right: 15.21%;
+  bottom: 5.34%;
+  left: 15.14%;
+  font-size: var(--font-size-31xl);
+}
+.conformation-page {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 1470px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}
