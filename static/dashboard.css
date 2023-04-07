@@ -250,10 +250,11 @@
 .icon-magnifying-glass {
   position: absolute;
   width: 4.57%;
-  top: 0px;
+  top: -2px;
   right: 1.75%;
-  left: 92.68%;
+  left: 92.88%;
   max-width: 60%;
+  cursor: pointer;
   overflow: hidden;
   height: 55.21px;
 }
@@ -481,4 +482,24 @@
   border:none;
   top:40px;
   font-family: var(--font-artifika);
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  left:300px;
+  margin-left: 840px;
+  font-size: 17px;
+  border:none;
+  height:50px;
+  border-radius: 0 var(--br-sm) var(--br-sm) 0;
+  /* border: 1px solid grey; */
+  /* border-left: none; Prevent double borders */
+  cursor: pointer;
+}
+form.example button:hover {
+  background: #0b7dda;
 }
