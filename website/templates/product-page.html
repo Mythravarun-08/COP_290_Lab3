@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='product-page.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="product-page">
+      <div class="rectangle-parent3">
+        <form method="GET">
+          <button class="group-child10" type="submit" name="action" value="my-account" ><b>My Account</b></button>
+          <button class="group-child11" type="submit" name="action" value="cart"  ><b>Cart</b></button>
+        </form>
+      </div>
+      <form method="GET">
+        <button class="gadget-world1" id="gw5" type="submit" name="action" value="dashboard"><b>Gadget World</b></button>
+      </form>
+      <div class="instance-parent">
+        <div class="rectangle-wrapper" id="rectangleContainer">
+          <!-- <div class="instance-child"></div> -->
+        </div>
+        <form class="example" method="GET">
+          <input class="what-are-you" placeholder="Search" type="text" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <img class="product-page-child" src="{{product.photo}}">
+      <div class="product-page-item"></div>
+      <div class="product-page-inner"></div>
+      <form method="GET">
+        <button class="product-page-child1"  type="submit" name="action" value="buy-now"><b>Buy Now</b></button>
+        <button class="product-page-child2"  type="submit" name="action" value="add-to-cart"><b>Add to Cart</b></button>
+      </form>
+      <b class="price">₹&nbsp;{{product.price}}</b>
+      <div class="description"><b>{{product.name}}</b> <br> &nbsp;{{product.description}}</div>
+      <div class="line-div"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./add-product-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="add-product-page">
+      <div class="add-product-page-child"></div>
+      <div class="vector-container">
+        <img class="group-child42" alt="" src="./public/rectangle-47.svg" />
+        <button class="group-child43" id="rectangle1">Logout</button>
+        <button class="group-child44" id = "faq">FAQ’s</button>
+        <div class="group-child45"></div>
+        <button class="group-child46" id="rectangle4">My Orders</button>
+        <!-- <div class="my-orders1">My Orders</div> -->
+        <div class="add-product1">Add Product</div>
+        <!-- <div class="faqs1">FAQ’s</div> -->
+        <!-- <div class="logout2">Logout</div> -->
+      </div>
+      <div class="gadget-world7">GADGET WORLD</div>
+      <div class="add-product-page-inner">
+        <div class="rectangle-parent14">
+          <div class="group-child47"></div>
+          <b class="category">CATEGORY</b
+          ><b class="product-name">PRODUCT NAME</b><b class="model">MODEL</b
+          ><b class="quantity">QUANTITY</b><b class="images-url">IMAGES URL</b
+          ><b class="company">COMPANY</b>
+          <input class="group-child48" placeholder="TYPE HERE" type = "text" required>
+          <input class="group-child49" placeholder="TYPE HERE" type = "url" required>
+          <input class="group-child50" placeholder="TYPE HERE" type = "url" required>
+          <input class="group-child52" placeholder="TYPE HERE" type = "number" required>
+          <input class="group-child54" placeholder="TYPE HERE" type = "text" required>
+          <input class="group-child56" placeholder="TYPE HERE" type = "text" required>
+          <input class="group-child58" placeholder="TYPE HERE" type = "text" required>
+          <!-- <b class="type-here6">TYPE HERE</b> -->
+          <button class="group-child60" id="rectangle18">ADD PRODUCT</button>
+          <!-- <b class="add-product2">ADD PRODUCT</b -->
+          ><b class="specifications-url">SPECIFICATIONS URL</b>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var rectangle1 = document.getElementById("rectangle1");
+      if (rectangle1) {
+        rectangle1.addEventListener("click", function (e) {
+          window.location.href = "./index.html";
+        });
+      }
+      
+      var rectangle4 = document.getElementById("rectangle4");
+      if (rectangle4) {
+        rectangle4.addEventListener("click", function (e) {
+          window.location.href = "./seller-profile-page.html";
+        });
+      }
+      
+      var rectangle18 = document.getElementById("rectangle18");
+      if (rectangle18) {
+        rectangle18.addEventListener("click", function (e) {
+          window.location.href = "./seller-profile-page.html";
+        });
+      }
+      </script>
+  </body>
+</html>

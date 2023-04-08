@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='cart-confirmation.css') }}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="cart-confirmation">
+      <form method="GET">
+        <button class="gadget-world1" id="gw5" type="submit" name="action" value="dashboard"><b>Gadget World</b></button>
+      </form>
+      <div class="cart-confirmation-child"></div>
+      <div class="group-container">
+        <div class="rectangle-parent4">
+          <div class="group-child18"></div>
+          <form method="GET">
+            <button class="group-child19" id="rectangle1" type="submit" name="action" value="confirm-buy" >CONFIRM & BUY</button>
+          </form>
+          <!-- <div class="confirm-buy">CONFIRM& BUY</div> -->
+          <img class="rectangle-icon" alt="" src="{{ url_for('static', filename='public/rectangle-56.svg') }}" />
+        </div>
+        <div class="group-wrapper">
+          <div class="group-parent1">
+            {%if bound ==0 %}
+              <p class="nop">There are no items in the Cart</p>
+              {% endif %}
+            {% for i in range(bound) %}
+                <div class="rectangle-parent{{5+i}}">
+                  <div class="group-child20" id="rectangle{{3+3*i}}"></div>
+                  <img class="group-child21" src="{{ products[i].photo }}">
+                  <div class="product-name">{{ products[i].name }}</div>
+                  <div class="price-xxxxxx">Price: ₹ &nbsp;{{ products[i].price }}</div>
+                </div>
+            {% endfor %}
+            
+          </div>
+        </div>
+        <div class="total-xxxx-container">
+          <p class="total">Total:</p>
+          <p class="total">₹ {{totalprice}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

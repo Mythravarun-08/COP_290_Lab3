@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        <div class="flash-messages-wrapper">
+          <div class="flash-messages-header">
+            <button class="flash-messages-close">&times;</button>
+          </div>
+          <div class="flash-messages-content">
+            {% for category, message in messages %}
+              <div class="flash-message {{ category }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endwith %}
+    <div class="dashboard">
+      <div class="dashboard-child"></div>
+      <div class="gadget-world1" id="gw5"><b>Gadget World</b></div>
+      <div class="text"></div>
+      <div class="rectangle-parent3">
+        <div class="group-child10"></div>
+        <b class="twitter1">Twitter</b><b class="facebook1">Facebook</b
+        ><b class="connect-with-us1">Connect With Us</b
+        ><b class="instagram1">Instagram</b
+        ><b class="get-to-know1">Get to Know US</b
+        ><b class="about-us1" id="aboutUsText">About Us</b
+        ><b class="help1">Help</b><b class="payments1">Payments</b
+        ><b class="faq1">FAQ</b>
+      </div>
+      <div class="dashboard-inner">
+        <div class="rectangle-parent4">
+          <form method="GET">
+            <button class="group-child11" name="action" value="cart" type="submit"><b>Cart</b></button>
+            <button class="group-child12" name="action" value="myaccount" type="submit"><b>My Account</b></button>
+            <button class="group-child13" name="action" value="logout" type="submit"><b>Logout</b></button>
+        </form>
+        </div>
+      </div>
+      <div class="instance-parent">
+        <form class="example" method="GET">
+          <input class="what-are-you" placeholder="Search" name="search" type="text">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="great-offers-parent">
+        <b class="great-offers1">Great Offers</b>
+        <img class="frame-child" src="{{ url_for('static', filename='banner.jpeg') }}">
+        <b class="products-for-you">Products For You</b>
+        <div class="group-container">
+          
+
+        {% for i in range(4) %}
+        <div class="rectangle-parent{{ 5+i }}" id="groupContainer{{ 4+i }}">
+          <form method="GET">
+            <button class="group-child15" type="submit" name="product_id" value="{{ products[i].id }}"></button>
+          <img role="button" class="group-child16" src="{{ products[i].photo }}">
+          <b class="price-xxxxxxx">Price : ₹ &nbsp;{{ products[i].price }}</b>
+          <b class="description">{{ products[i].name }}</b>
+        </form>
+        </div>
+        {% endfor %}
+
+        </div>
+        {% for i in range(2) %}
+        <div class="group-parent{{ i+1 }}">
+          {% for j in range(4) %}
+          <div class="rectangle-parent{{ 5+j }}" id="groupContainer{{ 9+j+(4*i)+i }}">
+            <form method="GET">
+              <button class="group-child15" value="{{ products[j+4+4*i].id }}" name = "product_id" type="submit" ></button>
+            </form>
+            <img class="group-child16" src="{{products[j+4+4*i].photo}}">
+            <b class="price-xxxxxxx">Price : ₹ &nbsp;{{products[j+4+4*i].price}}</b>
+            <b class="description">{{products[j+4+4*i].name}}</b>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        <div class = "group-parent3">
+          {% for i in range(4) %}
+          <div class="rectangle-parent{{ 17+i }}" id="groupContainer{{ 19+i }}">
+            <form method="GET">
+              <button class="group-child39" value="{{products[12+i].id}}" name="product_id" type="submit"></button>
+            </form>
+            <img class="group-child40" src="{{products[12+i].photo}}">
+            <b class="price-xxxxxxx">Price : ₹ &nbsp;{{products[12+i].price}}</b>
+            <b class="description12">{{products[12+i].name}}</b>
+          </div>
+          {% endfor %}
+
+        </div>
+        <b class="best-selling-products">Best Selling Products</b
+        ><b class="latest-products">Latest Products</b>
+      </div>
+      
+    </div>
+
+    <script>
+const flashMessages = document.querySelector('.flash-messages');
+    const flashMessagesClose = document.querySelector('.flash-messages-close');
+
+    if (flashMessages && flashMessagesClose) {
+      flashMessagesClose.addEventListener('click', () => {
+        flashMessages.classList.add('flash-messages-hidden');
+        setTimeout(() => {
+          flashMessages.remove();
+        }, 500);
+      });
+    }
+
+      </script>
+  </body>
+</html>

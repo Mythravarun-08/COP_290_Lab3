@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='seller-sign-up.css') }}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-messages">
+        <div class="flash-messages-wrapper">
+          <div class="flash-messages-header">
+            <button class="flash-messages-close">&times;</button>
+          </div>
+          <div class="flash-messages-content">
+            {% for category, message in messages %}
+              <div class="flash-message {{ category }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endwith %}
+    <div class="seller-signup">
+      <div class="seller-signup-child"></div>
+      <div class="gadget-world" id="gADGETWORLDText">GADGET WORLD</div>
+      <form method="POST">
+      <div class="rectangle-parent">
+        <div class="group-child"></div>
+        <input class="group-item" placeholder="Password" type = "password" name = "password" required/>
+        <!-- <div class="password">Password</div> -->
+        <div class="create-account">Create Account</div>
+        <input class="group-inner" placeholder="First Name" name = "first name" type = "text" required/>
+        <!-- <div class="first-name">First Name</div> -->
+        <input class="rectangle-div" placeholder = "Last Name" name = "last name" type = "text" required/>
+        <!-- <div class="last-name">Last Name</div> -->
+        <input class="group-child1" placeholder="Email" type = "email" name = "email" required/>
+        <input class="group-child2" placeholder="Phone Number" type = "number" name = "phone number" required/>
+        <!-- <div class="email">Email</div>
+        <div class="phone-number">Phone Number</div> -->
+        <!-- <div class="group-child2"></div>
+        <div class="phone-number">Phone Number</div> -->
+        <input class="rectangle-input" placeholder="Confirm Password" type="password" name = "confirm password" required/>
+        <input class="group-child4" placeholder="Address" name = "address" type = "address" required/>
+        <!-- <div class="address">Address</div> -->
+        <input class="group-child5" placeholder="AADHAR Number" name = "aadhar" type = "number" required/>
+        <!-- <div class="aadhar-number">AADHAR Number</div> -->
+        <button class="group-child6" id="rectangle9"> Create Account</button>
+      </div>
+    </form>
+    </div>
+
+    <script>
+      const flashMessages = document.querySelector('.flash-messages');
+      const flashMessagesClose = document.querySelector('.flash-messages-close');
+
+      if (flashMessages && flashMessagesClose) {
+        flashMessagesClose.addEventListener('click', () => {
+          flashMessages.classList.add('flash-messages-hidden');
+          setTimeout(() => {
+            flashMessages.remove();
+          }, 500);
+        });
+      }
+      </script>
+  </body>
+</html>

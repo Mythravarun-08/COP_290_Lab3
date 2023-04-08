@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./search-result-page.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Artifika:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Athiti:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="search-result-page">
+      <div class="search-result-page-child"></div>
+      <form method="GET">
+        <button class="gadget-world9" id="gw5" type="submit" name="action" value="dashboard"><b>Gadget World</b></button>
+      </form>
+      <div class="rectangle-parent17">
+        <!-- <div class="group-child71"></div> -->
+        <button class="group-child72" id="rectangle1"><b>Cart</b></button>
+        <!-- <div class="cart2">CART</div> -->
+        <button class="group-child73" id="rectangle2"><b>My Account</b></button>
+        <!-- <div class="my-account2">MY ACCOUNT</div> -->
+      </div>
+      <div class="rectangle-parent18">
+        <div class="group-child74"></div>
+        <div class="filter-by">Filter By</div>
+        <div class="price1">Price</div>
+        <input class="group-child75" placeholder="min">
+        <input class="group-child76" placeholder="max">
+        <!-- <div class="max">max</div> -->
+        <!-- <div class="min">min</div> -->
+      </div>
+      <div class="rectangle-parent19">
+        <div class="group-child77"></div>
+        <b class="twitter2">Twitter</b><b class="facebook2">Facebook</b
+        ><b class="connect-with-us2">Connect With Us</b
+        ><b class="instagram2">Instagram</b
+        ><b class="get-to-know2">Get to Know US</b
+        ><b class="about-us5" id="aboutUsText">About Us</b
+        ><b class="help2">Help</b><b class="payments2">Payments</b
+        ><b class="faq2">FAQ</b>
+      </div>
+      <div class="instance-container">
+        <!-- <div class="rectangle-wrapper2" id="rectangleContainer">
+          <div class="instance-inner"></div>
+        </div> -->
+        <input class="what-are-you2"placeholder="Search" type="">
+        <div class="group-child78" id="icn1"></div>
+        <img class="vector-icon" alt="" src="./public/vector.svg" id="icn"/>
+      </div>
+      <div class="rectangle-parent20">
+        <button class="group-child79">Next Page</button>
+        <!-- <b class="next-page-">NEXT PAGE -&gt;</b> -->
+      </div>
+      <div class="search-result-page-inner">
+        <div class="rectangle-parent21">
+          <div class="group-child80"></div>
+          <div class="group-child81" id="rectangle11"></div>
+          <div class="group-child82"></div>
+          <div class="group-child83"></div>
+          <div class="group-child84"></div>
+          <div class="group-child85" id="rectangle15"></div>
+          <div class="group-child86"></div>
+          <div class="group-child87"></div>
+          <div class="group-child88"></div>
+          <div class="group-child89" id="rectangle19"></div>
+          <div class="group-child90"></div>
+          <div class="group-child91"></div>
+          <div class="group-child92"></div>
+          <div class="group-child93" id="rectangle23"></div>
+          <div class="group-child94"></div>
+          <div class="group-child95"></div>
+          <div class="group-child96"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var rectangle1 = document.getElementById("rectangle1");
+      if (rectangle1) {
+        rectangle1.addEventListener("click", function (e) {
+          window.location.href = "./cart.html";
+        });
+      }
+      
+      var rectangle2 = document.getElementById("rectangle2");
+      if (rectangle2) {
+        rectangle2.addEventListener("click", function (e) {
+          window.location.href = "./profile-page.html";
+        });
+      }
+      
+      var aboutUsText = document.getElementById("aboutUsText");
+      if (aboutUsText) {
+        aboutUsText.addEventListener("click", function (e) {
+          window.location.href = "./log-about-us.html";
+        });
+      }
+      
+      var rectangleContainer = document.getElementById("rectangleContainer");
+      if (rectangleContainer) {
+        rectangleContainer.addEventListener("click", function (e) {
+          window.location.href = "search-result-page.html";
+        });
+      }
+      
+      var rectangle11 = document.getElementById("rectangle11");
+      if (rectangle11) {
+        rectangle11.addEventListener("click", function (e) {
+          window.location.href = "./product-page.html";
+        });
+      }
+      
+      var rectangle15 = document.getElementById("rectangle15");
+      if (rectangle15) {
+        rectangle15.addEventListener("click", function (e) {
+          window.location.href = "./product-page.html";
+        });
+      }
+      
+      var rectangle19 = document.getElementById("rectangle19");
+      if (rectangle19) {
+        rectangle19.addEventListener("click", function (e) {
+          window.location.href = "./product-page.html";
+        });
+      }
+      
+      var rectangle23 = document.getElementById("rectangle23");
+      if (rectangle23) {
+        rectangle23.addEventListener("click", function (e) {
+          window.location.href = "./product-page.html";
+        });
+      }
+      var gw2 = document.getElementById("gw2");
+      if (gw2){
+        gw2.addEventListener("click", function (e){
+          window.location.href ="./dashboard.html"
+        })
+      }
+      </script>
+  </body>
+</html>
