@@ -1,1 +1,1 @@
-Vector Graphics
+Images
