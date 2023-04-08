@@ -1,0 +1,148 @@
+.login-page-child {
+  position: absolute;
+  width: 100.07%;
+  top: 289.5px;
+  right: -0.03%;
+  left: -0.03%;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.gadget-world16 {
+  position: absolute;
+  width: 50.79%;
+  top: 119px;
+  left: 26.06%;
+  display: inline-block;
+  height: 109px;
+  cursor: pointer;
+}
+.group-child166 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+}
+.login3 {
+  position: absolute;
+  height: 9.02%;
+  width: 23.26%;
+  top: 9.95%;
+  left: 9.26%;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  display: inline-block;
+}
+.group-child167 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 30px;
+  padding-left: 20px;
+  border: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-family: var(--font-artifika);
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+}
+.user-name3 {
+  position: absolute;
+  height: 46.91%;
+  width: 67.52%;
+  top: 27.16%;
+  left: 8.03%;
+  display: inline-block;
+}
+.rectangle-parent29 {
+  position: absolute;
+  height: 12.6%;
+  width: 58.45%;
+  top: 28.15%;
+  right: 32.21%;
+  bottom: 59.25%;
+  left: 9.34%;
+}
+.password3 {
+  position: absolute;
+  height: 48.1%;
+  width: 60%;
+  top: 26.58%;
+  left: 7.97%;
+  display: inline-block;
+}
+.group-child169,
+.rectangle-parent30 {
+  position: absolute;
+  height: 12.29%;
+  width: 58.45%;
+  top: 46.03%;
+  font-size: 30px;
+  font-family: var(--font-artifika);
+  padding-left: 20px;
+  right: 32.18%;
+  bottom: 41.68%;
+  left: 9.37%;
+}
+.group-child169 {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-black);
+}
+.login4 {
+  position: absolute;
+  height: 58.06%;
+  width: 57.07%;
+  top: 21.51%;
+  left: 26.93%;
+  display: inline-block;
+}
+.rectangle-parent31 {
+  position: absolute;
+  height: 14.46%;
+  width: 43.4%;
+  top: 70.76%;
+  right: 47.34%;
+  bottom: 14.77%;
+  left: 9.26%;
+  font-size: var(--font-size-26xl);
+  color: var(--color-white);
+}
+.rectangle-parent28 {
+  position: absolute;
+  height: 56.4%;
+  width: 63.48%;
+  top: 35.96%;
+  right: 15.36%;
+  bottom: 7.63%;
+  left: 21.16%;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray);
+}
+.login-page {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 1171px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}

@@ -1,0 +1,236 @@
+.signup-page-child {
+  position: absolute;
+  width: 100.05%;
+  top: 289.5px;
+  right: -0.03%;
+  left: -0.03%;
+  background-color: var(--color-gainsboro);
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.gadget-world {
+  position: absolute;
+  top: 115px;
+  left: calc(50% - 398.5px);
+  display: inline-block;
+  width: 645px;
+  height: 87px;
+  cursor: pointer;
+}
+.group-child {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-white);
+  height: 1686px;
+}
+.create-account {
+  position: absolute;
+  width: 77.28%;
+  top: 0;
+  left: 2.59%;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  display: inline-block;
+  height: 78px;
+}
+.group-item {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.61%;
+  top: 182px;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  right: 0;
+  left: 0.39%;
+  border-radius: var(--br-3xs);
+  height: 103px;
+}
+.first-name {
+  position: absolute;
+  width: 50%;
+  top: 205px;
+  left: 7.08%;
+  display: inline-block;
+  height: 40px;
+}
+.group-inner {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.61%;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  top: 345px;
+  right: 0.39%;
+  left: 0;
+  border-radius: var(--br-3xs);
+  height: 103px;
+}
+.last-name {
+  position: absolute;
+  width: 50%;
+  top: 376px;
+  left: 3.85%;
+  display: inline-block;
+  height: 40px;
+}
+.group-child1,
+.rectangle-input {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.37%;
+  top: 515px;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  right: 0.63%;
+  left: 0;
+  border-radius: var(--br-3xs);
+  height: 103px;
+}
+.group-child1 {
+  top: 688px;
+  height: 102px;
+}
+.address,
+.email {
+  position: absolute;
+  width: 52.75%;
+  top: 538px;
+  left: 3.85%;
+  display: inline-block;
+  height: 61px;
+}
+.address {
+  width: 32.31%;
+  top: 720px;
+  left: 3.54%;
+  height: 43px;
+}
+.rectangle-div {
+  position: absolute;
+  width: 93.32%;
+  top: 1384px;
+  right: 6.37%;
+  font-family: var(--font-artifika);
+  color : white;
+  cursor : pointer;
+  font-size : 30px;
+  padding-left: 20px;
+  left: 0.31%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-black);
+  height: 109px;
+}
+.create-account1 {
+  position: absolute;
+  width: 54.4%;
+  top: 1417px;
+  left: 27.52%;
+  color: var(--color-white);
+  display: inline-block;
+  height: 50px;
+}
+.group-child2 {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.37%;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  top: 1021px;
+  right: 0;
+  left: 0.63%;
+  border-radius: var(--br-3xs);
+  height: 103px;
+}
+.password {
+  position: absolute;
+  width: 56.68%;
+  top: 1050px;
+  left: 4.72%;
+  display: inline-block;
+  height: 57px;
+}
+.group-child3 {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.69%;
+  top: 850px;
+  right: 0;
+  left: 0.31%;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  border-radius: var(--br-3xs);
+  height: 102px;
+}
+.phone-number {
+  position: absolute;
+  width: 56.76%;
+  top: 879px;
+  left: 4.32%;
+  display: inline-block;
+  height: 56px;
+}
+.group-child4 {
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  width: 99.69%;
+  top: 1185px;
+  font-family: var(--font-artifika);
+  font-size : 30px;
+  padding-left: 20px;
+  right: 0;
+  left: 0.31%;
+  border-radius: var(--br-3xs);
+  height: 101px;
+}
+.confirm-password {
+  position: absolute;
+  width: 56.76%;
+  top: 1214px;
+  left: 4.32%;
+  display: inline-block;
+  height: 56px;
+}
+.create-account-parent {
+  position: absolute;
+  width: 76.26%;
+  top: 38px;
+  right: 20.86%;
+  left: 2.88%;
+  height: 1493px;
+}
+.rectangle-parent {
+  position: absolute;
+  width: 77.44%;
+  top: 378px;
+  right: 11.25%;
+  left: 11.31%;
+  height: 1686px;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray);
+}
+.signup-page {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 2168px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}

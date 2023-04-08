@@ -1,0 +1,121 @@
+.seller-login-page-child {
+  position: absolute;
+  width: 104.42%;
+  top: 289.5px;
+  right: -4.38%;
+  left: -0.03%;
+  border-top: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 1px;
+}
+.gadget-world6 {
+  position: absolute;
+  cursor: pointer;
+  width: 46.74%;
+  top: 115px;
+  left: 21.09%;
+  display: inline-block;
+  height: 87px;
+}
+.group-child38 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+}
+.login1 {
+  position: absolute;
+  height: 9.51%;
+  width: 23.26%;
+  top: 12.46%;
+  left: 9.26%;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  display: inline-block;
+}
+.group-child39,
+.group-child40 {
+  position: absolute;
+  padding-left: 20px;
+  font-size: 30px;
+  border: none;
+  height: 13.28%;
+  font-family: var(--font-artifika);
+  width: 58.45%;
+  top: 31.64%;
+  right: 32.18%;
+  bottom: 55.08%;
+  left: 9.37%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-gainsboro);
+}
+.group-child40 {
+  height: 12.95%;
+  top: 50.49%;
+  bottom: 36.56%;
+}
+.password,
+.user-name {
+  position: absolute;
+  height: 6.23%;
+  width: 39.47%;
+  top: 35.25%;
+  left: 20.72%;
+  display: inline-block;
+}
+.password {
+  width: 35.07%;
+  top: 54.59%;
+}
+.group-child41 {
+  position: absolute;
+  height: 15.25%;
+  width: 43.4%;
+  top: 76.56%;
+  right: 47.34%;
+  font-size: 40px;
+  font-family: var(--font-artifika);
+  color: white;
+  bottom: 8.2%;
+  left: 9.26%;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-black);
+  cursor: pointer;
+}
+.login2 {
+  position: absolute;
+  height: 8.85%;
+  width: 24.77%;
+  top: 79.84%;
+  left: 20.95%;
+  font-size: var(--font-size-26xl);
+  color: var(--color-white);
+  display: inline-block;
+}
+.rectangle-parent13 {
+  position: absolute;
+  height: 59.57%;
+  width: 60%;
+  top: 33.01%;
+  right: 20%;
+  bottom: 7.42%;
+  left: 20%;
+  font-size: var(--font-size-11xl);
+  color: var(--color-dimgray);
+}
+.seller-login-page {
+  position: relative;
+  background-color: var(--color-silver-100);
+  width: 100%;
+  height: 1253px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-black);
+  font-family: var(--font-artifika);
+}
