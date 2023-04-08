@@ -1,1 +1,1 @@
-#This directory contains the frontend and backend files of the website
+This directory contains the frontend and backend files of the website
