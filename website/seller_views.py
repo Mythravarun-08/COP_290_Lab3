@@ -154,7 +154,7 @@ def add_product():
             existing_product = Product.query.filter_by(name=name, seller_id=current_user.id).first()
             if existing_product:
                # If exists, update the stock of the product
-               existing_product.stock += quantitiy
+               existing_product.stock += int(quantitiy)
                db.session.commit()
                flash('Product stock updated!', category='success')
             else:
