@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <style>
+    .banners {
+      width: 90%;
+      margin-left: 5%;
+      /* height:995000px; */
+    }
+
+    .card {
+      transition: transform 0.4s;
+    }
+
+    .card:hover {
+      transform: scale(0.96);
+    }
+
+    .card:hover {
+      background-color: #f8f9fa;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover {
+      border: 0.5px solid black;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+</head>
+
+<body>
+  {% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %}
+  <div class="flash-messages">
+    <div class="flash-messages-wrapper">
+      <div class="flash-messages-header">
+        <button class="flash-messages-close">&times;</button>
+      </div>
+      <div class="flash-messages-content">
+        {% for category, message in messages %}
+        <div class="flash-message {{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %} {% endwith %}
+  <nav class="navbar bg-primary navbar-expand-lg" style="background-color: rgb(40, 160, 640); height: 100%">
+    <div class="container-fluid">
+      <form method="GET">
+        <button class="navbar-brand" type="submit" name="action" value="dashboard" style="
+              color: white;
+              background-color: transparent;
+              border: none;
+              font-size: 200%;
+              padding-left: 10%;
+            ">
+          <b>Gadget World</b>
+        </button>
+      </form>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: white"></span>
+      </button>
+      <div class="container-md" style="margin-left: 4%">
+        <form class="d-flex" role="search" method="get">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 55%"
+            name="product_name" />
+          <button type="submit" class="btn btn-success">Search</button>
+        </form>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form method="GET">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <button class="nav-link" aria-current="page" style="color: white; font-size: 140%" name="action"
+                value="myaccount" type="submit">
+                Account
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" style="color: white; font-size: 140%" name="action" value="cart" type="submit">
+                Cart
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" style="color: white; font-size: 140%" name="action" value="logout" type="submit">
+                Logout
+              </button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- banners -->
+  <div class="banners">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="height: 10%">
+      <div class="carousel-inner" style="height: 10%">
+        <div class="carousel-item active" style="height: 10%">
+          <img src="https://t3.ftcdn.net/jpg/03/16/37/64/360_F_316376413_nYL2jpLONPQPOsy31DE86n7FPpSxPIi3.jpg"
+            class="d-block w-100" alt="..." style="height: 10%;max-height: 359.05px;" />
+        </div>
+        <div class="carousel-item" style="height: 10%">
+          <img src="https://as1.ftcdn.net/v2/jpg/02/48/85/42/1000_F_248854242_WuPCInxu4wZ0HkyBcmiFZF3dWknBwaLJ.jpg"
+            class="d-block w-100" alt="..." style="height: 10%;max-height: 359.05px;" />
+        </div>
+        <div class="carousel-item" style="height: 10%">
+          <img src="https://as1.ftcdn.net/v2/jpg/02/48/85/42/1000_F_248854261_kKYFxIDSTx99KI94sDKbWEd597K803cb.jpg"
+            class="d-block w-100" alt="..." style="height: 10%;max-height: 359.05px;" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="container-fluid" style="width: 100%; margin-top: 1%;"> -->
+  <!-- 1 st box -->
+  <div class="container-fluid" style="margin-top: 100px; width: 92%">
+    <a class="navbar-brand" href="#" style="color: Black; font-size: 200%; text-align: center"><b>Smart Phones</b></a>
+    <div class="text-center d-flex" style="overflow-x: scroll; overflow-y: hidden">
+      {% for i in range(91,100) %}
+      <div class="col" style="margin-right: 10px">
+        <div class="card" style="width: 18rem; height: 395px">
+          <a style="text-decoration: none">
+            <form method="GET">
+              <button style="border: none; background-color: transparent" type="submit" name="view_product_id"
+                value="{{ products[i].id }}">
+                <img src="{{ products[i].photo }}" style="height: 214px" class="card-img-top" />
+              </button>
+            </form>
+            <div class="card-body">
+              <p class="card-text" style="color: black">
+                {{ products[i].name }}
+              </p>
+            </div>
+            <div class="card-footer">
+              <p class="card-text" style="color: black">
+                Price: ₹ {{ products[i].price}}
+              </p>
+            </div>
+            <form method="GET">
+              <div class="card-footer">
+                <!-- <small class="text-body-secondary" style="color:black">Last updated 3 mins ago</small> -->
+                <button type="submit" class="btn btn-primary" name="view_product_id" value="{{ products[i].id }}">
+                  View
+                </button>
+                <button type="submit" class="btn btn-secondary" name="cart_product_id" value="{{products[i].id}}">
+                  Add to Cart
+                </button>
+              </div>
+            </form>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- ----------------------------------------2nd box------------products for you -->
+  <div class="container-fluid" style="margin-top: 100px; width: 92%">
+    <a class="navbar-brand" href="#" style="color: Black; font-size: 200%; text-align: center"><b>Televisions</b></a>
+    <form>
+      <div class="text-center d-flex" style="overflow-x: scroll; overflow-y: hidden">
+        {% for i in range(5027,5036) %}
+        <div class="col" style="margin-right: 10px">
+          <div class="card" style="width: 18rem; height: 395px">
+            <a style="text-decoration: none">
+              <form method="GET">
+                <button style="border: none; background-color: transparent" type="submit" name="view_product_id"
+                  value="{{ products[i].id }}">
+                  <img src="{{ products[i].photo }}" style="height: 214px" class="card-img-top" />
+                </button>
+              </form>
+              <div class="card-body">
+                <p class="card-text" style="color: black">
+                  {{ products[i].name }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <p class="card-text" style="color: black">
+                  Price: ₹ {{ products[i].price}}
+                </p>
+              </div>
+
+              <div class="card-footer">
+                <!-- <small class="text-body-secondary" style="color:black">Last updated 3 mins ago</small> -->
+                <button type="submit" class="btn btn-primary" name="view_product_id" value="{{ products[i].id }}">
+                  View
+                </button>
+                <button type="submit" class="btn btn-secondary" name="cart_product_id" value="{{products[i].id}}">
+                  Add to Cart
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+  <!-- -------------------------------------------------3rd box----------- best selling ----------- -->
+  <div class="container-fluid" style="margin-top: 100px; width: 92%">
+    <a class="navbar-brand" href="#" style="color: Black; font-size: 200%; text-align: center"><b>Tablets</b></a>
+    <form>
+      <div class="text-center d-flex" style="overflow-x: scroll; overflow-y: hidden">
+        {% for i in range(1078,1087) %}
+        <div class="col" style="margin-right: 10px">
+          <div class="card" style="width: 18rem; height: 395px">
+            <a style="text-decoration: none">
+              <form method="GET">
+                <button style="border: none; background-color: transparent" type="submit" name="view_product_id"
+                  value="{{ products[i].id }}">
+                  <img src="{{ products[i].photo }}" style="height: 214px" class="card-img-top" />
+                </button>
+              </form>
+              <div class="card-body">
+                <p class="card-text" style="color: black">
+                  {{ products[i].name }}
+                </p>
+              </div>
+              <div class="card-footer">
+                <p class="card-text" style="color: black">
+                  Price: ₹ {{ products[i].price}}
+                </p>
+              </div>
+              <div class="card-footer">
+                <!-- <small class="text-body-secondary" style="color:black">Last updated 3 mins ago</small> -->
+                <button type="submit" class="btn btn-primary" name="view_product_id" value="{{ products[i].id }}">
+                  View
+                </button>
+                <button type="submit" class="btn btn-secondary" name="cart_product_id" value="{{products[i].id}}">
+                  Add to Cart
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+  <!-- ----------------------4th box-------------------- latest products ---------- -->
+  <div class="container-fluid" style="margin-top: 100px; width: 92%">
+    <a class="navbar-brand" href="#" style="color: Black; font-size: 200%; text-align: center"><b>Laptops</b></a>
+    <form>
+      <div class="text-center d-flex" style="overflow-x: scroll; overflow-y: hidden">
+        {% for i in range(2609,2618) %}
+        <div class="col" style="margin-right: 10px">
+          <div class="card" style="width: 18rem; height: 395px">
+            <a style="text-decoration: none">
+              <form method="GET">
+                <button style="border: none; background-color: transparent" type="submit" name="view_product_id"
+                  value="{{ products[i].id }}">
+                  <img src="{{ products[i].photo }}" style="height: 214px" class="card-img-top" />
+                </button>
+              </form>
+              <div class="card-body">
+                <p class="card-text" style="color: black">
+                  {{products[i].name}}
+                </p>
+              </div>
+              <div class="card-footer">
+                <p class="card-text" style="color: black">
+                  Price: ₹ {{ products[i].price}}
+                </p>
+              </div>
+              <div class="card-footer">
+                <!-- <small class="text-body-secondary" style="color:black">Last updated 3 mins ago</small> -->
+                <button type="submit" class="btn btn-primary" name="view_product_id" value="{{ products[i].id }}">
+                  View
+                </button>
+                <button type="submit" class="btn btn-secondary" name="cart_product_id" value="{{ products[i].id }}">
+                  Add to Cart
+                </button>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+  <!-- footer -->
+  <footer class="text-center text-lg-start text-muted bg-primary mt-3">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start pt-4 pb-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-12 col-lg-3 col-sm-12 mb-2">
+            <!-- Content -->
+            <a class="text-white h2"> Gadget World </a>
+            
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">Store</h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">About us</a></li>
+              <li><a class="text-white-50" href="#">Find store</a></li>
+              <li><a class="text-white-50" href="#">Categories</a></li>
+              <li><a class="text-white-50" href="#">Blogs</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">
+              Information
+            </h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Help center</a></li>
+              <li><a class="text-white-50" href="#">Money refund</a></li>
+              <li><a class="text-white-50" href="#">Shipping info</a></li>
+              <li><a class="text-white-50" href="#">Refunds</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <!-- Links -->
+            <h6 class="text-uppercase text-white fw-bold mb-2">Support</h6>
+            <ul class="list-unstyled mb-4">
+              <li><a class="text-white-50" href="#">Help center</a></li>
+              <li><a class="text-white-50" href="#">Documents</a></li>
+              <li><a class="text-white-50" href="#">Account restore</a></li>
+              <li><a class="text-white-50" href="#">My orders</a></li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+  </footer>
+
+  <!-- </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script>
+    const flashMessages = document.querySelector(".flash-messages");
+    const flashMessagesClose = document.querySelector(
+      ".flash-messages-close"
+    );
+
+    if (flashMessages && flashMessagesClose) {
+      flashMessagesClose.addEventListener("click", () => {
+        flashMessages.classList.add("flash-messages-hidden");
+        setTimeout(() => {
+          flashMessages.remove();
+        }, 500);
+      });
+    }
+  </script>
+</body>
+
+</html>

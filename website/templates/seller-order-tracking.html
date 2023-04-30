@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order tracking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}" />
+    </head>
+  
+    <body>
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %}
+      <div class="flash-messages">
+        <div class="flash-messages-wrapper">
+          <div class="flash-messages-header">
+            <button class="flash-messages-close">&times;</button>
+          </div>
+          <div class="flash-messages-content">
+            {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %} {% endwith %}
+      <nav class="navbar bg-primary navbar-expand-lg " style="background-color: rgb(40,160,640); height:100%">
+        <div class="container-fluid">
+            <form method="GET">
+                <button class="navbar-brand" type="submit" name="action" value="seller-account"
+                    style="color:white; background-color: transparent;border: none; font-size: 200%; padding-left: 10%;"><b>Gadget
+                        World</b></button>
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="color:white;"></span>
+            </button>
+            <form method="GET">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 0%;">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <button class="nav-link " aria-current="page" type="submit" name="action" value="seller-account"
+                                style="color:white; font-size: 140%;"><b>Account</b></button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" type="submit" name="action" value="seller-orders"  style="color:white; font-size:140%">Orders</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link"type="submit" name="action" value="logout" style="color:white; font-size:140%">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid" style="width: 90%; margin-top: 1%; margin-bottom: 1%;">
+        <div class="card " style=" width:100%">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{product.photo}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-size: 300%;">{{product.name}}</h5>
+                        <p class="card-text" style="margin-top: 3%;">{{product.description}}</p>
+                        <p style="font-size: 20px;">Price:₹&nbsp;{{ product.price }}</p>
+                    </div>
+                    <div class="card-footer" style="background-color: white; border:none; margin-top: 0%;">
+                        <div class="accordion" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseOne"
+                                        style="font-size: 20px; font-weight: 400; font-family: Artifika;">
+                                        Shipping Address
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        {{user.address}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseTwo"
+                                        style="font-size: 20px; font-weight: 400; font-family: Artifika;">
+                                        Order Confirmed status
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Order received
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseThree"
+                                        style="font-size: 20px; font-weight: 400; font-family: Artifika;">
+                                        Shipping Status
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Order is not shipped yet
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseFour"
+                                        style="font-size: 20px; font-weight: 400; font-family: Artifika;">
+                                        Out for Delivery
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Order hasn't reached the final delivery station yet
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                                        aria-controls="panelsStayOpen-collapseFive"
+                                        style="font-size: 20px; font-weight: 400; font-family: Artifika;">
+                                        Delivery status
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        Order is not yet delivered
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script>
+            const flashMessages = document.querySelector(".flash-messages");
+            const flashMessagesClose = document.querySelector(
+              ".flash-messages-close"
+            );
+      
+            if (flashMessages && flashMessagesClose) {
+              flashMessagesClose.addEventListener("click", () => {
+                flashMessages.classList.add("flash-messages-hidden");
+                setTimeout(() => {
+                  flashMessages.remove();
+                }, 500);
+              });
+            }
+          </script>
+</body>
+
+</html>
