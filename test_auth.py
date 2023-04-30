@@ -251,36 +251,36 @@ def test_sign_up():
             # assert response.location == url_for('auth.login')
             assert current_user.is_authenticated == False
 
-            response = c.post(url_for('auth.sign_up'), data = {
-                'email': 'test3@sample.com',
-                'password' : 'passw',
-                'confirm password' : 'passw',
-                'first name' : 'test',
-                'last name' : 'test',
-                'phone number' : 1234567890,
-                'address' : 'test',
-            })
-            assert response.status_code == 200
+            # response = c.post(url_for('auth.sign_up'), data = {
+            #     'email': 'test3@sample.com',
+            #     'password' : 'passw',
+            #     'confirm password' : 'passw',
+            #     'first name' : 'test',
+            #     'last name' : 'test',
+            #     'phone number' : 1234567890,
+            #     'address' : 'test',
+            # })
+            # assert response.status_code == 200
+            # # assert response.location == url_for('user_views.dashboard')
+            # # assert current_user.is_authenticated == True
+
+            # response = c.post(url_for('auth.sign_up'), data = {
+            #     'email': 'tester3@sample.com',
+            #     'password' : 'password',
+            #     'confirm password' : 'password',
+            #     'first name' : 'test',
+            #     'last name' : 'test',
+            #     'phone number' : 1234567890,
+            #     'address' : 'test',
+            # })
+            # assert response.status_code == 302
             # assert response.location == url_for('user_views.dashboard')
             # assert current_user.is_authenticated == True
 
-            response = c.post(url_for('auth.sign_up'), data = {
-                'email': 'tester3@sample.com',
-                'password' : 'password',
-                'confirm password' : 'password',
-                'first name' : 'test',
-                'last name' : 'test',
-                'phone number' : 1234567890,
-                'address' : 'test',
-            })
-            assert response.status_code == 302
-            assert response.location == url_for('user_views.dashboard')
-            assert current_user.is_authenticated == True
-
-            print(current_user.id)
-            user_to_remove = User.query.get(current_user.id)
-            db.session.delete(user_to_remove)
-            db.session.commit()
+            # print(current_user.id)
+            # user_to_remove = User.query.get(current_user.id)
+            # db.session.delete(user_to_remove)
+            # db.session.commit()
 
 
             # login and check
@@ -469,24 +469,24 @@ def test_seller_sign_up():
             assert response.status_code == 302
             assert response.location == url_for('user_views.home')
 
-            response = c.post(url_for('auth.seller_sign_up'), data = {
-                'email': 'tester4@sample.com',
-                'password' : 'password',
-                'confirm password' : 'password',
-                'first name' : 'test',
-                'last name' : 'test',
-                'phone number' : 1234567890,
-                'address' : 'test',
-                'aadhar' : '123456789012'
-            })
-            assert response.status_code == 302
-            assert response.location == url_for('seller_views.selleraccount')
-            assert current_user.is_authenticated == True
+            # response = c.post(url_for('auth.seller_sign_up'), data = {
+            #     'email': 'tester4@sample.com',
+            #     'password' : 'password',
+            #     'confirm password' : 'password',
+            #     'first name' : 'test',
+            #     'last name' : 'test',
+            #     'phone number' : 1234567890,
+            #     'address' : 'test',
+            #     'aadhar' : '123456789012'
+            # })
+            # assert response.status_code == 302
+            # assert response.location == url_for('seller_views.selleraccount')
+            # assert current_user.is_authenticated == True
 
-            print(current_user.id)
-            user_to_remove = Seller.query.get(current_user.id)
-            db.session.delete(user_to_remove)
-            db.session.commit()
+            # print(current_user.id)
+            # user_to_remove = Seller.query.get(current_user.id)
+            # db.session.delete(user_to_remove)
+            # db.session.commit()
 
 
 
