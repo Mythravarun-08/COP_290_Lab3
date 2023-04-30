@@ -1,0 +1,72 @@
+.flash-messages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .flash-messages-wrapper {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .flash-messages-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  
+  .flash-messages-close {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .flash-messages-content {
+    padding: 1rem;
+  }
+  
+  .flash-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .flash-message.success {
+    background-color: #00c853;
+  }
+  
+  .flash-message.error {
+    background-color: #f44336;
+  }
+  
+  .flash-messages-hidden {
+    display: none;
+  }
+
+  video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-fullscreen-button {
+  display:none !important;
+}
+
+video::-webkit-media-controls-volume-slider {
+  -webkit-appearance: none !important;
+}
